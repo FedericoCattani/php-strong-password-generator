@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+$_SESSION['passwordGenerata'] = $_GET['lunghezza'];
+
+header('Location: ./atterraggio.php');
 
 // BUSINESS LOGIC
 include 'function.php';
