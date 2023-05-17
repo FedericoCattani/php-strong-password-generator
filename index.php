@@ -1,9 +1,9 @@
 <?php
 
-session_start();
-$_SESSION['passwordGenerata'] = $_GET['lunghezza'];
+//session_start();
+//$_SESSION['passwordGenerata'] = $_GET['lunghezza'];
 
-header('Location: ./atterraggio.php');
+//header('Location: ./atterraggio.php');
 
 // BUSINESS LOGIC
 include 'function.php';
@@ -39,17 +39,17 @@ include 'function.php';
 <body>
   <div class="container-fc">
     <?php if (isset($_GET['lunghezza'])) { ?>
-    <h1>La tua password generata casualmente di <?php echo $lunghezza ?> caratteri è:
-      <strong><?php echo $password ?></strong>
-    </h1>
+      <h1>La tua password generata casualmente di <?php echo $lunghezza ?> caratteri è:
+        <strong><?php echo $password ?></strong>
+      </h1>
     <?php } else { ?>
-    <form action="index.php" method="GET">
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="number" class="form-control" id="exampleInputPassword1" name="lunghezza">
-      </div>
-      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-    </form>
+      <form action="index.php" method="GET">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" name="lunghezza">
+        </div>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+      </form>
     <?php } ?>
   </div>
 </body>
