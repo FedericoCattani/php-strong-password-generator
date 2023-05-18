@@ -16,5 +16,5 @@ function generaPassowrd($lunghezza)
     $newPassword .= $charset[$random];
   }
 
-  return $newPassword;
+  return str_shuffle($newPassword);
 }
